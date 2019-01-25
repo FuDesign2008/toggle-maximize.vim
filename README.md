@@ -1,20 +1,19 @@
-# toogle-maximize.vim
-[n]vim plugin, toggle maximize your window
+# toggle-maximize.vim
+
+[n]vim plugin, toggle maximize the window
 
 ## Usage
 
-Either call `ToggleMaximizeCurrentWindow` explicitly with:
+1. `:ToggleWindow`: command to toggle maximize the window
+1. `g:toggle_window_custom_keymap`: default is `0` and use `<F3>` for key mapping. If you want to change mapping, set the option to `1` in `.vimrc`
+
+```vimscript
+" custom key mapping in .vimrc
+set g:toggle_window_custom_keymap=1
+nnoremap <F3> :ToggleWindow<CR>
 
 ```
-:call ToggleMaximizeCurrentWindow()
-```
 
-or map it in your `~/.vimrc` (or `~/.config/nvim/init.vim` if you use [nvim])
-
-```
-map <silent> <C-m> :call ToggleMaximizeCurrentWindow()<CR>
-```
+## Snapshot
 
 ![demo](tty.gif)
-
-[nvim]: https://github.com/neovim/neovim
